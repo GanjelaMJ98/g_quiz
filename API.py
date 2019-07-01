@@ -30,9 +30,20 @@ class Question():
         """
     def print(self):
         print("Question: {0}\n".format(self.question))
+        i = 0
         for i in range(len(self.answers_list)):
             print("{0}. {1}".format(i+1, self.answers_list[i]))
-        print("{0}. {1}".format(i+1, self.right_answer))
+        print("{0}. {1}\n".format(i+2, self.right_answer))
+        return
+
+    def is_right(self, answer):
+        if(answer == self.right_answer):
+            return True
+        else:
+            return False
+        """
+        Stop the car
+        """
 
 
 if __name__ == "__main__":
